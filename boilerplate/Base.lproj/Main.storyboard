@@ -30,23 +30,40 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="1P3-jy-aED" kind="show" identifier="goToLogin" id="Fpd-v9-DYl"/>
+                        <segue destination="sZi-0V-w5l" kind="show" identifier="goToLogin" id="8QC-nX-RzV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-846" y="-34"/>
+            <point key="canvasLocation" x="-1623" y="-34"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="shg-5g-9XJ">
+            <objects>
+                <navigationController modalPresentationStyle="fullScreen" id="sZi-0V-w5l" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="TFV-as-u9z"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="voB-96-xde">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1P3-jy-aED" kind="relationship" relationship="rootViewController" id="W66-hE-cU2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oQi-dz-lqI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-749" y="-34"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="yTL-8Q-TWq">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="1P3-jy-aED" customClass="LoginViewController" customModule="boilerplate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e1A-s5-sDy" customClass="LoginView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Gen-7r-zx2">
-                                <rect key="frame" x="100" y="374" width="214" height="148"/>
+                                <rect key="frame" x="100" y="347" width="214" height="148"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xxy-0H-2Mt">
                                         <rect key="frame" x="0.0" y="0.0" width="214" height="34"/>
@@ -64,11 +81,25 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3r-iz-WUh">
+                                <rect key="frame" x="100" y="733" width="214" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="UTF-kM-PNP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Registro"/>
+                                <connections>
+                                    <segue destination="ZaR-iT-3Fk" kind="show" id="9tJ-er-LBh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="D3r-iz-WUh" firstAttribute="leading" secondItem="KVe-Fg-RoH" secondAttribute="leading" constant="100" id="0Nq-Fe-j33"/>
+                            <constraint firstItem="KVe-Fg-RoH" firstAttribute="bottom" secondItem="D3r-iz-WUh" secondAttribute="bottom" constant="30" id="2Go-IV-hVs"/>
                             <constraint firstItem="Gen-7r-zx2" firstAttribute="leading" secondItem="KVe-Fg-RoH" secondAttribute="leading" constant="100" id="3Hy-QM-C65"/>
                             <constraint firstItem="Gen-7r-zx2" firstAttribute="centerX" secondItem="e1A-s5-sDy" secondAttribute="centerX" id="abd-9a-QM0"/>
+                            <constraint firstItem="KVe-Fg-RoH" firstAttribute="trailing" secondItem="D3r-iz-WUh" secondAttribute="trailing" constant="100" id="aem-Ew-6P4"/>
                             <constraint firstItem="Gen-7r-zx2" firstAttribute="centerY" secondItem="e1A-s5-sDy" secondAttribute="centerY" id="pJa-o7-zge"/>
                             <constraint firstItem="KVe-Fg-RoH" firstAttribute="trailing" secondItem="Gen-7r-zx2" secondAttribute="trailing" constant="100" id="yno-CE-8pC"/>
                         </constraints>
@@ -78,7 +109,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zky-7h-igx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="209" y="-34"/>
+            <point key="canvasLocation" x="67" y="-34"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="5H3-Nq-Ew9">
+            <objects>
+                <viewController id="ZaR-iT-3Fk" customClass="RegisterViewController" customModule="boilerplate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tMK-Ks-IpS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQg-dR-UNT">
+                                <rect key="frame" x="116" y="389.5" width="182" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bQg-dR-UNT" firstAttribute="centerY" secondItem="tMK-Ks-IpS" secondAttribute="centerY" id="Cf2-7I-tbd"/>
+                            <constraint firstItem="bQg-dR-UNT" firstAttribute="centerX" secondItem="tMK-Ks-IpS" secondAttribute="centerX" id="HWF-N0-w4C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rr8-13-wze"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OFz-Pc-09f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xhv-oy-b8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904" y="-34"/>
         </scene>
     </scenes>
 </document>
