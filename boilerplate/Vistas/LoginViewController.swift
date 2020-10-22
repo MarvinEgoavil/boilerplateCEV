@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  boilerplate
 //
 //  Created by user177281 on 22/10/2020.
@@ -8,13 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class LoginViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
 }
-
