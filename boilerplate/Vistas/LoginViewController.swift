@@ -14,4 +14,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
     }
-}
+    
+    @IBAction func goToRegister(_ sender: Any) {
+        self.performSegue(withIdentifier: "goToRegister", sender: nil)
+    }
+    
+    }

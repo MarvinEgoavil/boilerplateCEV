@@ -92,7 +92,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Registro"/>
                                 <connections>
-                                    <segue destination="ZaR-iT-3Fk" kind="show" id="9tJ-er-LBh"/>
+                                    <action selector="goToRegister:" destination="1P3-jy-aED" eventType="touchDownRepeat" id="USi-C1-JyT"/>
+                                    <action selector="goToRegister:" destination="1P3-jy-aED" eventType="touchDown" id="fq5-a0-eID"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,10 +110,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jxc-Y9-jBb"/>
+                    <connections>
+                        <segue destination="ZaR-iT-3Fk" kind="show" identifier="goToRegister" id="6r4-Zj-vtp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zky-7h-igx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="67" y="-34"/>
+            <point key="canvasLocation" x="66.666666666666671" y="-34.151785714285715"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="5H3-Nq-Ew9">
@@ -131,14 +135,23 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rr8-13-wze"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="bQg-dR-UNT" firstAttribute="centerY" secondItem="tMK-Ks-IpS" secondAttribute="centerY" id="Cf2-7I-tbd"/>
                             <constraint firstItem="bQg-dR-UNT" firstAttribute="centerX" secondItem="tMK-Ks-IpS" secondAttribute="centerX" id="HWF-N0-w4C"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="bgo-Pp-I13" appends="YES" id="0t9-cb-I2N"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="OFz-Pc-09f"/>
+                    <connections>
+                        <outlet property="SwipeGestureRecognizer" destination="bgo-Pp-I13" id="T6F-AN-rEz"/>
+                        <outlet property="swipeGestureRecognizer" destination="bgo-Pp-I13" id="ptF-3Q-oWj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhv-oy-b8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="bgo-Pp-I13"/>
             </objects>
             <point key="canvasLocation" x="904" y="-34"/>
         </scene>
@@ -156,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prL-aq-cIN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2452" y="1583"/>
+            <point key="canvasLocation" x="-2371" y="1582"/>
         </scene>
         <!--Primera-->
         <scene sceneID="yo2-NF-8GE">

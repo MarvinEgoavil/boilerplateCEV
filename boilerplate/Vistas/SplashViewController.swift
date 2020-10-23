@@ -17,7 +17,7 @@ class SplashViewController : UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        if(false){
+        if(true){
             //if we don't have valid session
             self.performSegue(withIdentifier: "goToLogin", sender: nil)
             

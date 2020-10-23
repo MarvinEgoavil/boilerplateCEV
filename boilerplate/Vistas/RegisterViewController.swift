@@ -8,11 +8,26 @@
 
 import UIKit
 
-class RegisterViewController:UIViewController {
+class RegisterViewController:UIViewController, UIGestureRecognizerDelegate {
+    
+    
+    @IBOutlet var swipeGestureRecognizer: UISwipeGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        swipeGestureRecognizer.delegate = self
+        
+    }
+    override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+        // Check the point
+        print(presses)
+        print(event)
+    }
+    
+    override func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+        print(presses)
+        print(event)
     }
     
 }
